@@ -1,0 +1,77 @@
+body {
+    background: #EBEBEB;
+}
+
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook {
+    background: #2E406E;
+}
+
+.icon-twitter {
+    background: #339DC5;
+}
+
+.icon-youtube {
+    background: #E83028;
+}
+
+.icon-whatsapp {
+    background: #5cb85c;
+}
+
+.icon-instagram {
+    background: linear-gradient( 0deg, rgba(240, 98, 36, 1) 0%, rgba(108, 72, 159, 1) 86%, rgba(77, 84, 165, 1) 100%);
+    /* 	background: #3F60A5; */
+}
+
+#insta {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon:first-child {
+    border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child {
+    border-radius: 0 0 0 1rem;
+}
+
+.icon:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+.nav-buscador {
+    width: 600px;
+}

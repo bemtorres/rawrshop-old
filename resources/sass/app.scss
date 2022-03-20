@@ -1,0 +1,25 @@
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+@import '../components/mazer/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css';
+@import '../components/mazer/dist/assets/css/bootstrap.css';
+@import '../components/mazer/dist/assets/css/app.css';
+@import '../components/mazer/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css';
+@import '../components/mazer/dist/assets/vendors/iconly/bold.css';
+
+/* customers team package */
+
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+/* customers team package */
+
+@import "~izitoast/dist/css/iziToast.css";
+@import "~select2/dist/css/select2.min.css";
+@import "~spectrum-colorpicker2/dist/spectrum.css";
+@import 'customer';

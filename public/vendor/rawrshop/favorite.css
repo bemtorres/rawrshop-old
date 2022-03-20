@@ -1,0 +1,92 @@
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    display: none;
+}
+
+.screen-darken {
+    height: 100%;
+    width: 0%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility 0.2s, width 2s ease-in;
+}
+
+.screen-darken.active {
+    z-index: 10;
+    transition: opacity .3s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+
+/* ============ mobile view ============ */
+
+@media all and (max-width: 991px) {
+    .offcanvas-header {
+        display: block;
+    }
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1200;
+        width: 80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+    }
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+    .mobile-offcanvas .container,
+    .mobile-offcanvas .container-fluid {
+        display: block;
+    }
+}
+
+
+/* ============ mobile view .end// ============ */
+
+.dropdown-menu {
+    min-width: 14rem;
+}
+
+.megasubmenu {
+    padding: 1rem;
+}
+
+
+/* ============ desktop view ============ */
+
+@media all and (min-width: 992px) {
+    .dropdown-menu .dropdown-toggle::after {
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+    }
+    .megasubmenu {
+        left: 100%;
+        top: 0;
+        min-height: 100%;
+        min-width: 500px;
+    }
+    .dropdown-menu>li:hover .megasubmenu {
+        display: block;
+    }
+}
