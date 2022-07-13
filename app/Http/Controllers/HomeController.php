@@ -20,11 +20,12 @@ class HomeController extends Controller
 {
   public function index() {
     $t = Tienda::first();
-    $paginator = $t->getConfigPaginator();
+
 
     if (!$t) { return redirect()->route('install.index'); }
     if ($t->getSeoEnabled()) { $this->seo($t->present()->dataSeo()); }
     if ($t->getMantenimientoEnabled()) { return redirect()->route('home.mantenimiento'); }
+    $paginator = $t->getConfigPaginator();
 
     $paginas = Pagina::where('estado',2)->orderBy('posicion','desc')->get();
     $categorias = Categoria::where('activo',true)->with(['subs','productos','subs','subs.productos'])->get();
